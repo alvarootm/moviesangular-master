@@ -1,0 +1,25 @@
+<section class="tendencias">
+  <h2>TOP TENDENCIAS ESTA SEMANA</h2>
+</section>
+<div class="row pt-3">
+  <div class="col-2" *ngFor="let item of resultados.results">
+    <!--En teoría el ngFor recibe los datos del array response y debería de iterar para cada elemento-->
+    <!--Como le hemos pasado response directamente, y el array está en response.results hay que poner resultados.results-->
+    <div class="card">
+      <img
+        src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2{{
+          item.poster_path
+        }}"
+        class="card-img-top"
+        alt="no-image"
+      />
+
+      <div class="card-body">
+        <h5 class="card-title">{{ item.title }}</h5>
+        <p class="card-text">{{ item.release_date }}</p>
+        <p>{{ item.vote_average }}</p>
+        <a class="btn btn-primary" (click)="detalle(item.id)"> Ver detalles </a>
+      </div>
+    </div>
+  </div>
+</div>
