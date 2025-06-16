@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
@@ -12,11 +11,29 @@ import { HomeComponent } from './home/home.component';
 import { SeriessearchComponent } from './seriessearch/seriessearch.component';
 import { SeriesdetailsComponent } from './seriesdetails/seriesdetails.component';
 import { FooterComponent } from './footer/footer.component';
+import { ErrorComponent } from './error/error.component';
+import { MiPipePipe } from './pipes/mi-pipe.pipe'; // Pipe
 
 @NgModule({
-  declarations: [AppComponent, SearchComponent, DetailsComponent, NavbarComponent, HomeComponent, SeriessearchComponent, SeriesdetailsComponent, FooterComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  declarations: [
+    AppComponent,
+    SearchComponent,
+    DetailsComponent,
+    NavbarComponent,
+    HomeComponent,
+    SeriessearchComponent,
+    SeriesdetailsComponent,
+    FooterComponent,
+    ErrorComponent,
+    MiPipePipe // Mantenido el nombre original aquí
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
+  ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

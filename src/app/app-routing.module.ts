@@ -5,18 +5,16 @@ import { SearchComponent } from './search/search.component';
 import { HomeComponent } from './home/home.component';
 import { SeriessearchComponent } from './seriessearch/seriessearch.component';
 import { SeriesdetailsComponent } from './seriesdetails/seriesdetails.component';
+import { ErrorComponent } from './error/error.component';
 
 const routes: Routes = [
-  //{ path: '', pathMatch: 'full', redirectTo: 'search' }, --> Se cargaba el routing de vista detalle, mirar de ser menos restrictivo
-  //{ path: '**', pathMatch: 'full', redirectTo: 'search' },
-  //Cuando busca algo que no está en las rutas redireciona a search
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: 'home', component: HomeComponent },
   { path: 'search', component: SearchComponent },
   { path: 'seriessearch', component: SeriessearchComponent },
-  //{ path: 'details', component: DetailsComponent },
   { path: 'details/:id', component: DetailsComponent },
   { path: 'seriesdetails/:id', component: SeriesdetailsComponent },
+  { path: '**', component: ErrorComponent } // Ruta errores
 ];
 
 @NgModule({

@@ -16,7 +16,7 @@
 
       <div class="card-body">
         <h5 class="card-title">{{ item.title }}</h5>
-        <p class="card-text">{{ item.release_date }}</p>
+        <p class="card-text">{{ item.release_date | miPipe }}</p>
         <p>{{ item.vote_average }}</p>
         <a class="btn btn-primary" (click)="detalle(item.id)"> Ver detalles </a>
       </div>
